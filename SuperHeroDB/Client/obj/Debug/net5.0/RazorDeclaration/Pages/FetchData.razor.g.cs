@@ -83,6 +83,13 @@ using SuperHeroDB.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\_Imports.razor"
+using SuperHeroDB.Client.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\Pages\FetchData.razor"
 using SuperHeroDB.Shared;
 

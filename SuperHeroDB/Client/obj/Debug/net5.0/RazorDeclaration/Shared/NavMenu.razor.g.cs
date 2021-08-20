@@ -82,6 +82,20 @@ using SuperHeroDB.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\_Imports.razor"
+using SuperHeroDB.Client.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\_Imports.razor"
+using SuperHeroDB.Shared;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +104,7 @@ using SuperHeroDB.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\Shared\NavMenu.razor"
+#line 33 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
