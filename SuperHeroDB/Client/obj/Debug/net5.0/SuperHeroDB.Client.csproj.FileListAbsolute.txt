@@ -636,3 +636,5 @@ C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\obj\Debug\net5.0\ref\Sup
 C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\obj\Debug\net5.0\SuperHeroDB.Client.pdb
 C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\SuperHeroes.razor.g.cs
 C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\obj\Debug\net5.0\Razor\Pages\SuperHeroes.razor.g.cs
+C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\obj\Debug\net5.0\RazorDeclaration\Pages\SuperHero.razor.g.cs
+C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\obj\Debug\net5.0\Razor\Pages\SuperHero.razor.g.cs

@@ -19,7 +19,11 @@ namespace SuperHeroDB.Client.Services
         public async Task<List<SuperHero>> GetSuperHeroes()
         {
           return  await httpClient.GetFromJsonAsync<List<SuperHero>>("api/superhero");
+        }
 
+        public async Task<SuperHero> GetSuperHero(int id)
+        {
+            return await httpClient.GetFromJsonAsync<SuperHero>($"api/superhero/{id}");
         }
     }
 }

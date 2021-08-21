@@ -1,5 +1,6 @@
 ﻿@page "/superheroes"
 @inject ISuperHeroService  superHeroService
+@inject NavigationManager navigationManager
 <h3>Super Heroes</h3>
 
 @if(heroes.Count == 0)
@@ -9,20 +10,26 @@ else
     <table class="table">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Hero Name</th>
                 <th>Comic</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach(var hero in heroes)
                 {
             <tr>
+                <td>@hero.Id</td>
                 <td>@hero.FirstName</td>
                 <td>@hero.LastName</td>
                 <td>@hero.HeroName</td>
-                <td>@hero.Comic</td>
+                <td>@hero.Comic.Name</td>
+                <td>
+                    <button class="btn btn-primary" @onclick="(() => ShowHero(hero.Id))">Show</button>
+                </td>
             </tr>
                     
                 }
@@ -33,10 +40,15 @@ else
 
 
 @code {     
-    List<SuperHero> heroes = new List<SuperHero>();
+    List<SuperHeroDB.Shared.SuperHero> heroes = new List<SuperHeroDB.Shared.SuperHero>();
 
     protected override async Task OnInitializedAsync()
     {
         heroes = await superHeroService.GetSuperHeroes();
+    }
+
+    void ShowHero(int id)
+    {
+        navigationManager.NavigateTo($"superhero/{id}");
     }
 }

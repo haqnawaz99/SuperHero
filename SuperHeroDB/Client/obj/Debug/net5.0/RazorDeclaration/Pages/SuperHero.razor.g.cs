@@ -96,8 +96,8 @@ using SuperHeroDB.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/superheroes")]
-    public partial class SuperHeroes : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/superhero/{id:int}")]
+    public partial class SuperHero : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,25 +105,23 @@ using SuperHeroDB.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\Pages\SuperHeroes.razor"
-            
-    List<SuperHeroDB.Shared.SuperHero> heroes = new List<SuperHeroDB.Shared.SuperHero>();
+#line 14 "C:\Programming\VS\Blazor\SuperHeroDB\SuperHeroDB\Client\Pages\SuperHero.razor"
+       
+    [Parameter]
+    public int Id { get; set; }
+
+    // SuperHeroDB.Shared.SuperHero hero = null;
+    SuperHeroDB.Shared.SuperHero hero = new SuperHeroDB.Shared.SuperHero();
 
     protected override async Task OnInitializedAsync()
     {
-        heroes = await superHeroService.GetSuperHeroes();
-    }
-
-    void ShowHero(int id)
-    {
-        navigationManager.NavigateTo($"superhero/{id}");
+        hero = await SuperHeroService.GetSuperHero(Id);
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISuperHeroService superHeroService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISuperHeroService SuperHeroService { get; set; }
     }
 }
 #pragma warning restore 1591
