@@ -22,10 +22,19 @@ namespace SuperHeroDB.Server.Controllers
             new SuperHero { Id = 2, FirstName = "Bruce", LastName = "Wayne", HeroName = "Batman", Comic = comics[1] },
         };
 
-        //[HttpGet]
+        [HttpGet]
         public async Task<IActionResult> GetSuperHeroes()
         {
             return Ok(heroes);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetSingleHero(int id)
+        {
+            var hero = heroes.FirstOrDefault(h => h.Id == id);
+            if (hero == null)
+                return NotFound("Super Hero was not found. ");
+            return Ok(hero);
         }
     }
 }

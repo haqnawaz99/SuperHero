@@ -200,7 +200,6 @@
     },
     "lazyAssembly": null,
     "pdb": {
-      "SuperHeroDB.Shared.pdb": "sha256-jrabOKKbDTaOmdwA2VnKoi59OZQee+F8bgZ7PQxgxSk=",
       "SuperHeroDB.Client.pdb": "sha256-0\/eINfSqH7kSu2hlzxfnKeXBkGdef2OEm+kDduDyRlw="
     },
     "runtime": {
